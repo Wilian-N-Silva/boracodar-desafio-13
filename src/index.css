@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card__inner {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .card--flip .card__inner,
+  .card:hover .card__inner {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+  }
+
+  .card--front,
+  .card--back {
+    backface-visibility: hidden;
+  }
+
+  .card--back {
+    transform: rotateY(180deg);
+  }
+}
