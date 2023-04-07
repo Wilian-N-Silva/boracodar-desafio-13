@@ -12,7 +12,7 @@ export function Field({
 }: FieldProps) {
   return (
     <div className="flex flex-col w-full">
-      <label htmlFor="card-number">{label}</label>
+      <label className="text-sm/4 text-gray-200 mb-1">{label}</label>
       <input
         className="w-full border border-gray-700 hover:border-[1.5px] focus-within:border-purple-600 rounded p-3 outline-none bg-gray-900 text-gray-400"
         type={type}
